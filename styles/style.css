@@ -1,3 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -5,7 +12,6 @@ main {
 }
 
 .content-section {
-  width: 100%;
   margin: 0 auto;
 }
 
@@ -171,19 +177,20 @@ main {
 }
 
 .lots__heading {
-  padding: 0 0 30px 0; /* Было 0 0 30px 40px */
+  padding: 0 0 30px 0;
   margin-top: 0;
   font-size: 40px;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1;
+  text-align: left; /* Добавьте */
 }
 
 .lots__card-list {
   display: grid;
-  grid-template-columns: repeat(3, 334px); /* фиксированная ширина */
-  column-gap: 25px;
-  justify-content: start; /* чтобы не растягивались */
+  grid-template-columns: repeat(3, 320px); /* Было 334px */
+  column-gap: 20px; /* Было 25px */
+  justify-content: start;
   list-style: none;
 }
 
@@ -204,7 +211,7 @@ main {
   gap: 30px;
   width: auto;
   height: 100%;
-  padding: 50px 40px;
+  padding: 50px 20px; /* Было 50px 40px */
   min-height: 563px; /* как на макете */
   box-sizing: border-box;
 }
@@ -256,6 +263,7 @@ main {
   text-decoration-line: underline;
   text-underline-position: under;
   width: fit-content;
+  text-align: left; /* Добавьте */
 }
 
 .about {
@@ -290,11 +298,12 @@ main {
 }
 
 .about__title {
-  padding: 0 0 60px 0; /* уберите верхний отступ */
+  padding: 0 0 40px 0; /* Было 60px */
   font-size: 40px;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1;
+  text-align: left; /* Добавьте */
 }
 
 .about__text {
@@ -311,7 +320,7 @@ main {
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 180px 50px 80px;
+  padding: 80px 50px 80px; /* Было 180px */
 }
 
 .footer__social-icon {
@@ -338,4 +347,16 @@ main {
   display: flex;
   gap: 48px;
   list-style: none;
+}
+
+.content-section,
+.header,
+.cover,
+.lots,
+.about,
+.footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
 }
