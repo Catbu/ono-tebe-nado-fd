@@ -11,9 +11,9 @@ main {
 
 .header {
   display: grid;
-  grid-template-columns: 1.51fr 2fr 1.5fr;
+  grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 92px 51px 89px;
+  padding: 92px 50px 89px;
 }
 
 .header__links-list {
@@ -81,6 +81,7 @@ main {
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .overlay {
@@ -90,7 +91,7 @@ main {
   z-index: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6000000238418579;
+  opacity: 0.6;
   background-color: #000000;
 }
 
@@ -113,20 +114,16 @@ main {
 }
 
 .aligned-text_center {
-  line-height: 1;
   text-align: center;
 }
 
 .aligned-text_right {
-  line-height: 1;
   text-align: right;
 }
 
 .letter-spacing-extended {
   letter-spacing: 60px;
 }
-
-/* Убирает ненужный отступ в конце слова, создаваемый свойством letter-spacing всего элемента */
 
 .remove-spacing {
   letter-spacing: normal;
@@ -138,7 +135,7 @@ main {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 78px;
+  gap: 80px;
   padding: 136px 0 0;
 }
 
@@ -182,7 +179,7 @@ main {
 
 .lots__card-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 25px;
   list-style: none;
 }
@@ -211,18 +208,21 @@ main {
   background-image: url(../images/card-lot-01.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .card__title {
@@ -265,7 +265,7 @@ main {
 }
 
 .about__column_text {
-  grid-column: 2/4;
+  grid-column: 2 / 4;
 }
 
 .about__logo {
@@ -298,7 +298,7 @@ main {
 
 .about__text p {
   font-size: 20px;
-  line-height: normal;
+  line-height: 1.2;
 }
 
 .footer {
@@ -319,7 +319,7 @@ main {
 
 .footer__menu-link {
   font-size: 18px;
-  line-height: normal;
+  line-height: 1.2;
   text-underline-position: under;
 }
 
