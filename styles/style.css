@@ -1,25 +1,19 @@
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
 main {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 183px;
 }
 
 .content-section {
+  width: 100%;
   margin: 0 auto;
 }
 
 .header {
   display: grid;
-  grid-template-columns: 1fr min-content 1fr;
+  grid-template-columns: 1.51fr 2fr 1.5fr;
   align-items: center;
-  padding: 92px 50px 89px;
+  padding: 92px 51px 89px;
 }
 
 .header__links-list {
@@ -83,11 +77,10 @@ main {
 
 .cover {
   position: relative;
-  padding: 100px 50px 50px 50px; /* Было 165px сверху */
+  padding: 165px 50px 50px 50px;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
 
 .overlay {
@@ -97,7 +90,7 @@ main {
   z-index: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 0.6000000238418579;
   background-color: #000000;
 }
 
@@ -120,16 +113,20 @@ main {
 }
 
 .aligned-text_center {
+  line-height: 1;
   text-align: center;
 }
 
 .aligned-text_right {
+  line-height: 1;
   text-align: right;
 }
 
 .letter-spacing-extended {
   letter-spacing: 60px;
 }
+
+
 
 .remove-spacing {
   letter-spacing: normal;
@@ -141,7 +138,7 @@ main {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 80px;
+  gap: 78px;
   padding: 136px 0 0;
 }
 
@@ -173,34 +170,32 @@ main {
 
 .lots {
   padding: 0 50px;
-  margin-top: 0; /* Добавьте если есть лишний отступ */
 }
 
 .lots__heading {
-  padding: 0 0 30px 0;
-  margin-top: 0;
-  font-size: 40px;
+  padding: 0 0 30px 40px;
   font-weight: bold;
-  text-transform: uppercase;
+  font-size: 40px;
   line-height: 1;
-  text-align: left; /* Добавьте */
+  text-transform: uppercase;
 }
 
 .lots__card-list {
   display: grid;
-  grid-template-columns: repeat(3, 320px); /* Было 334px */
-  column-gap: 20px; /* Было 25px */
-  justify-content: start;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 25px;
   list-style: none;
 }
 
-.lots__card-list-item {
+.lost__card-list-item {
   height: 100%;
 }
 
 .card-link {
   display: block;
   height: 100%;
+  text-decoration: none;
+  color: inherit;
 }
 
 .card {
@@ -211,30 +206,25 @@ main {
   gap: 30px;
   width: auto;
   height: 100%;
-  padding: 50px 20px; /* Было 50px 40px */
-  min-height: 563px; /* как на макете */
-  box-sizing: border-box;
+  padding: 50px 40px;
 }
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
 
 .card__title {
@@ -258,20 +248,18 @@ main {
 
 .lots__look-more-link {
   display: block;
-  margin: 30px 0 0 0; /* Было 30px 0 0 40px */
+  margin: 30px 0 0 40px;
   font-size: 20px;
   text-decoration-line: underline;
   text-underline-position: under;
   width: fit-content;
-  text-align: left; /* Добавьте */
 }
 
 .about {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  column-gap: 25px;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 24px;
   padding: 0 50px;
-  align-items: center;
 }
 
 .about__column {
@@ -279,7 +267,7 @@ main {
 }
 
 .about__column_text {
-  grid-column: 2 / 4;
+  grid-column: 2/4;
 }
 
 .about__logo {
@@ -290,7 +278,6 @@ main {
   height: 240px;
   border-radius: 50%;
   background-color: #000000;
-  margin-right: 0;
 }
 
 .about__logo-image {
@@ -298,12 +285,11 @@ main {
 }
 
 .about__title {
-  padding: 0 0 40px 0; /* Было 60px */
-  font-size: 40px;
+  padding: 100px 0 104px;
   font-weight: bold;
-  text-transform: uppercase;
+  font-size: 40px;
   line-height: 1;
-  text-align: left; /* Добавьте */
+  text-transform: uppercase;
 }
 
 .about__text {
@@ -314,13 +300,13 @@ main {
 
 .about__text p {
   font-size: 20px;
-  line-height: 1.2;
+  line-height: normal;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 80px 50px 80px; /* Было 180px */
+  padding: 180px 50px 80px;
 }
 
 .footer__social-icon {
@@ -335,7 +321,7 @@ main {
 
 .footer__menu-link {
   font-size: 18px;
-  line-height: 1.2;
+  line-height: normal;
   text-underline-position: under;
 }
 
@@ -347,16 +333,4 @@ main {
   display: flex;
   gap: 48px;
   list-style: none;
-}
-
-.content-section,
-.header,
-.cover,
-.lots,
-.about,
-.footer {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding-left: 50px;
-  padding-right: 50px;
 }
